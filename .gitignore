@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 ENEA
+# SPDX-FileContributor: Alberto P
+#
+# SPDX-License-Identifier: CC0-1.0
+
+__pycache__/
+output/
+cache/
+work/
+*.log
+build/
+dist/
+*.egg-info/
+# SLURM job logs from tests/run_verify_full.slurm
+nd_verify_full-*.out
+nd_verify_full-*.err
+# Data archives (e.g. the D1SDATA zips read as local "path" sources) must
+# never reach a remote
+*.zip

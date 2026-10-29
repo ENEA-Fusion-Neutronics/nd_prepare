@@ -1,0 +1,318 @@
+{
+  "_comment": "Hand-maintained oracle for validate_md5.py and validate_xsdir.py. See tests/README.md for the keys.",
+  "libraries": {
+    "D1SDATA_NEUTRON": {
+      "sources": [
+        {
+          "path": "d1sdata_YTF5QD_v1_0.zip",
+          "member": "xsdir_d1s"
+        },
+        {
+          "path": "Cross_section_data_for_Cu-65*.zip",
+          "member": "additionalLibs/dir/*.dir",
+          "placeholder_name": true,
+          "label": "additionalLibs/dir/*.dir"
+        }
+      ],
+      "expected": {
+        "ace_files": 83,
+        "md5_renamed": 0,
+        "xsdir_entries": 83,
+        "original_entries": 84,
+        "matched": 83,
+        "identical": 0,
+        "modified": 83,
+        "renamed": 0,
+        "superseded": 1,
+        "only_in_original": 1,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "FENDL21_NEUTRON": {
+      "sources": [
+        {
+          "path": "cache/FENDL21_NEUTRON/*.zip",
+          "member": "*.dir",
+          "all_archives": true,
+          "label": "*.dir fragments"
+        }
+      ],
+      "ignore_file_case": true,
+      "expected": {
+        "ace_files": 71,
+        "md5_renamed": 0,
+        "xsdir_entries": 71,
+        "original_entries": 71,
+        "matched": 71,
+        "identical": 0,
+        "modified": 71,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 0,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "FENDL31D_NEUTRON": {
+      "sources": [
+        {
+          "path": "cache/FENDL31D_NEUTRON/fendl31d-neutron-ace.zip",
+          "member": "fendl31d_ACE_Linux.xsd"
+        }
+      ],
+      "expected": {
+        "ace_files": 180,
+        "md5_renamed": 0,
+        "xsdir_entries": 180,
+        "original_entries": 181,
+        "matched": 180,
+        "identical": 0,
+        "modified": 180,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 1,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "FENDL31D_PROTON": {
+      "sources": [
+        {
+          "path": "cache/FENDL31D_PROTON/fendl30-proton-ace.zip",
+          "member": "*.xdr",
+          "label": "*.xdr fragments"
+        }
+      ],
+      "expected": {
+        "ace_files": 179,
+        "md5_renamed": 0,
+        "xsdir_entries": 179,
+        "original_entries": 179,
+        "matched": 179,
+        "identical": 0,
+        "modified": 179,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 0,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "FENDL32C_NEUTRON": {
+      "sources": [
+        {
+          "path": "cache/FENDL32C_NEUTRON/*.zip",
+          "member": "*.xsd",
+          "label": "*.xsd fragments"
+        }
+      ],
+      "expected": {
+        "ace_files": 192,
+        "md5_renamed": 0,
+        "xsdir_entries": 192,
+        "original_entries": 192,
+        "matched": 192,
+        "identical": 0,
+        "modified": 192,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 0,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "FENDL32C_PROTON": {
+      "sources": [
+        {
+          "path": "cache/FENDL32C_PROTON/*.zip",
+          "member": "*.xsd",
+          "label": "*.xsd fragments"
+        }
+      ],
+      "expected": {
+        "ace_files": 179,
+        "md5_renamed": 0,
+        "xsdir_entries": 179,
+        "original_entries": 179,
+        "matched": 179,
+        "identical": 0,
+        "modified": 179,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 0,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "IRDFF2_DOSIMETRY": {
+      "sources": [
+        {
+          "path": "cache/IRDFF2_DOSIMETRY/*.zip",
+          "member": "IRDFF-II/*.xsd",
+          "label": "IRDFF-II/*.xsd fragments"
+        }
+      ],
+      "expected": {
+        "ace_files": 70,
+        "md5_renamed": 0,
+        "xsdir_entries": 70,
+        "original_entries": 70,
+        "matched": 70,
+        "identical": 0,
+        "modified": 70,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 0,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "JEFF33_NEUTRON": {
+      "sources": [
+        {
+          "path": "cache/JEFF33_NEUTRON/xsdir.jeff33"
+        }
+      ],
+      "expected": {
+        "ace_files": 3372,
+        "md5_renamed": 0,
+        "xsdir_entries": 3372,
+        "original_entries": 3504,
+        "matched": 3372,
+        "identical": 0,
+        "modified": 3372,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 132,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "JEFF33_PROTON": {
+      "sources": [
+        {
+          "path": "cache/JEFF33_PROTON/JEFF33-p-ace.tgz",
+          "member": "tendl17h.xs"
+        }
+      ],
+      "expected": {
+        "ace_files": 1,
+        "md5_renamed": 1,
+        "xsdir_entries": 283,
+        "original_entries": 283,
+        "matched": 283,
+        "identical": 0,
+        "modified": 283,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 0,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "JEFF33_TSL": {
+      "sources": [
+        {
+          "path": "cache/JEFF33_TSL/xsdir.jeff33"
+        }
+      ],
+      "expected": {
+        "ace_files": 132,
+        "md5_renamed": 0,
+        "xsdir_entries": 132,
+        "original_entries": 3504,
+        "matched": 132,
+        "identical": 0,
+        "modified": 132,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 3372,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "JEFF40_NEUTRON": {
+      "sources": [
+        {
+          "path": "cache/JEFF40_NEUTRON/jeff4.xsdir"
+        },
+        {
+          "path": "cache/JEFF40_NEUTRON/jeff4_53ret-j3386.xsdir"
+        }
+      ],
+      "expected": {
+        "ace_files": 4744,
+        "md5_renamed": 0,
+        "xsdir_entries": 4744,
+        "original_entries": 7332,
+        "matched": 4744,
+        "identical": 0,
+        "modified": 4744,
+        "renamed": 0,
+        "superseded": 14,
+        "only_in_original": 2588,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "JEFF40_PROTON": {
+      "sources": [
+        {
+          "path": "cache/JEFF40_PROTON/*.zip",
+          "member": "xsdirentries_JEFF4_proton.txt"
+        }
+      ],
+      "expected": {
+        "ace_files": 288,
+        "md5_renamed": 0,
+        "xsdir_entries": 288,
+        "original_entries": 288,
+        "matched": 288,
+        "identical": 0,
+        "modified": 288,
+        "renamed": 0,
+        "superseded": 0,
+        "only_in_original": 0,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 0
+      }
+    },
+    "JEFF40_TSL": {
+      "sources": [
+        {
+          "path": "cache/JEFF40_TSL/*.zip",
+          "member": "jeff4.xsdir"
+        }
+      ],
+      "rename_duplicated_names": true,
+      "expected": {
+        "ace_files": 252,
+        "md5_renamed": 0,
+        "xsdir_entries": 252,
+        "original_entries": 316,
+        "matched": 252,
+        "identical": 0,
+        "modified": 190,
+        "renamed": 62,
+        "superseded": 0,
+        "only_in_original": 64,
+        "orphan_ace_files": 0,
+        "work_duplicate_names": 0,
+        "header_name_exceptions": 62
+      }
+    }
+  }
+}

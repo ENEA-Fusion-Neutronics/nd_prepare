@@ -1,0 +1,44 @@
+# SPDX-FileCopyrightText: 2026 ENEA
+# SPDX-FileContributor: Alberto P
+#
+# SPDX-License-Identifier: MPL-2.0
+
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nd-prepare"
+version = "0.1.0"
+description = "Download and repackage external nuclear data libraries into nd_manager's local-repository format"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MPL-2.0"
+license-files = ["COPYING"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+authors = [
+    {name = "Alberto P", email = "alberto743@tutamail.com"},
+]
+
+[project.urls]
+Homepage = "https://github.com/ENEA-Fusion-Neutronics/nd_prepare"
+
+[project.scripts]
+nd-prepare = "nd_prepare.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nd_prepare = ["sources.json"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "C4", "SIM", "PIE", "RUF", "PLE"]
+# RUF005: list concatenation reads better than unpacking for record rewrites.
+ignore = ["RUF005"]

@@ -1,0 +1,867 @@
+{
+  "_comment": "Manifest read by nd-prepare (see README.md, sources.json section). Not consumed by nd_manager itself.",
+  "cache_dir": "cache",
+  "output_dir": "output",
+  "libraries": {
+    "FENDL31D": {
+      "display_name": "FENDL-3.1d",
+      "date": "2018-01-24",
+      "production": true,
+      "description": "FENDL-3.1d neutron transport ACE data (293.6K) from the IAEA Fusion Evaluated Nuclear Data Library. Transport only; FENDL does not publish its own thermal scattering (S(alpha,beta)) sublibrary.",
+      "neutron": {
+        "mode": "ready",
+        "archives": [
+          {
+            "url": "https://nds.iaea.org/fendl31d/data/neutron/fendl31d-neutron-ace.zip",
+            "kind": "zip",
+            "md5": "d109ff15a5887d3ae22d5776c97b5972"
+          }
+        ],
+        "flatten_dirs": [
+          "fendl31d_ACE"
+        ],
+        "xsdir_member": "fendl31d_ACE_Linux.xsd",
+        "discard_members": [
+          "19K_039_"
+        ],
+        "drop_members": [
+          "fendl31d_ACE_Windows.xsd"
+        ]
+      },
+      "tsl": null,
+      "proton": {
+        "display_name": "FENDL-3.1d Proton",
+        "description": "FENDL-3.1d proton-induced ACE data (no temperature dependence) from the IAEA Fusion Evaluated Nuclear Data Library.",
+        "mode": "fragments",
+        "archives": [
+          {
+            "url": "https://nds.iaea.org/fendl31d/data/proton/fendl30-proton-ace.zip",
+            "kind": "zip",
+            "md5": "feea8deb3c4dd00f0d051a222a7451a2"
+          }
+        ],
+        "fragment_glob": "ace/*.xdr",
+        "flatten_dirs": [
+          "ace"
+        ]
+      },
+      "dosimetry": null
+    },
+    "FENDL32C": {
+      "display_name": "FENDL-3.2c",
+      "date": "2025-05-31",
+      "production": true,
+      "description": "FENDL-3.2c neutron transport ACE data (293.6K) from the IAEA Fusion Evaluated Nuclear Data Library. Transport only; FENDL does not publish its own thermal scattering (S(alpha,beta)) sublibrary.",
+      "neutron": {
+        "mode": "fragments",
+        "archives": [
+          {
+            "url": "https://nds.iaea.org/fendl/data/neutron/fendl-FENDL-3.2c-neutron-ace.zip",
+            "kind": "zip",
+            "md5": "f70dc1bbc2711dd706de7f0af73a036a"
+          }
+        ],
+        "fragment_glob": "neutron/ace/*.xsd",
+        "flatten_dirs": [
+          "neutron/ace"
+        ]
+      },
+      "tsl": null,
+      "proton": {
+        "display_name": "FENDL-3.2c Proton",
+        "description": "FENDL-3.2c proton-induced ACE data (no temperature dependence) from the IAEA Fusion Evaluated Nuclear Data Library.",
+        "mode": "fragments",
+        "archives": [
+          {
+            "url": "https://nds.iaea.org/fendl/data/proton/fendl-FENDL-3.2c-proton-ace.zip",
+            "kind": "zip",
+            "md5": "a5dc99ef64eeb119095ba4da443b29c9"
+          }
+        ],
+        "fragment_glob": "proton/ace/*.xsd",
+        "flatten_dirs": [
+          "proton/ace"
+        ]
+      },
+      "dosimetry": null
+    },
+    "FENDL21": {
+      "display_name": "FENDL-2.1",
+      "date": "2004-12-10",
+      "production": true,
+      "description": "FENDL-2.1 (FENDL/MC-2.1) neutron transport ACE data (300K) from the IAEA Fusion Evaluated Nuclear Data Library, one file per isotope or natural element. Transport only; FENDL does not publish its own thermal scattering (S(alpha,beta)) sublibrary.",
+      "neutron": {
+        "mode": "fragments",
+        "archives": [
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/H001mc.zip",
+            "kind": "zip",
+            "md5": "485b3046b832b476f16c545329dfec36"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/H002mc.zip",
+            "kind": "zip",
+            "md5": "cdf24ebd2d2e61d220bb66bd712dbc65"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/H003mc.zip",
+            "kind": "zip",
+            "md5": "c4da709d2a24d6c3480a2c512ca04cc4"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/He003mc.zip",
+            "kind": "zip",
+            "md5": "f9a18be86430ea672650a5a87d7ae0d8"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/He004mc.zip",
+            "kind": "zip",
+            "md5": "40595a34acfeec71ff4706d9a113e8aa"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Li006mc.zip",
+            "kind": "zip",
+            "md5": "0fb572dac8972e93c01268f8a90f74ea"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Li007mc.zip",
+            "kind": "zip",
+            "md5": "1556b9765b4e8d8e3dcee865ec949b50"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Be009mc.zip",
+            "kind": "zip",
+            "md5": "546e8279212620109ad1ff1349ec6fcf"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/B010mc.zip",
+            "kind": "zip",
+            "md5": "4b1cd869915eb5b7ee937f0cd2707a5f"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/B011mc.zip",
+            "kind": "zip",
+            "md5": "532cefe3f68f7fa585ad6aea3af266fd"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/C012mc.zip",
+            "kind": "zip",
+            "md5": "c34866a35efa297cb97fae2ea7f1c52e"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/N014mc.zip",
+            "kind": "zip",
+            "md5": "058de33100a03bbc257d03ef6bf82d0b"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/N015mc.zip",
+            "kind": "zip",
+            "md5": "09e28d4739c7f0f0e2aeaec953662700"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/O016mc.zip",
+            "kind": "zip",
+            "md5": "18e508dad473d5dc9e223fc1858fda0f"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/F019mc.zip",
+            "kind": "zip",
+            "md5": "92fe8200a9c80a75ec790394b1f4cd76"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Na023mc.zip",
+            "kind": "zip",
+            "md5": "314ff5d4e1812b63de4123430ef43668"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mg000mc.zip",
+            "kind": "zip",
+            "md5": "aac102db743a9cdfc3a075b6913091dd"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Al027mc.zip",
+            "kind": "zip",
+            "md5": "9369a8a9c82321ca67160c81a896955b"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Si028mc.zip",
+            "kind": "zip",
+            "md5": "755b086b78d65e6de5f5b6dc2db671f3"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Si029mc.zip",
+            "kind": "zip",
+            "md5": "c9edb9beee2c8bc3f94dba67250d33b9"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Si030mc.zip",
+            "kind": "zip",
+            "md5": "36bcb625134476357f6a884e59f2e55d"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/P031mc.zip",
+            "kind": "zip",
+            "md5": "34c85964db28a8fce67a1bd888423e12"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/S000mc.zip",
+            "kind": "zip",
+            "md5": "97fa7bba580c92ac3a797e61b7a98556"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Cl035mc.zip",
+            "kind": "zip",
+            "md5": "a3bccbcd867ee56f15fe934eb8917d23"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Cl037mc.zip",
+            "kind": "zip",
+            "md5": "3925e32c5fe83cff03985dc01707fadd"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/K000mc.zip",
+            "kind": "zip",
+            "md5": "337e21b43e8628a825a6eb6ecb3db2af"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ca000mc.zip",
+            "kind": "zip",
+            "md5": "7e504b5ed8dee3b7a80ec7d2042a64e2"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ti046mc.zip",
+            "kind": "zip",
+            "md5": "49a679861b4d6dd0ef251ef83e342fbf"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ti047mc.zip",
+            "kind": "zip",
+            "md5": "a8f7515deea0c3e2cf339399197deb4e"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ti048mc.zip",
+            "kind": "zip",
+            "md5": "b5b71aca24b80a0351747e7d08d0afee"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ti049mc.zip",
+            "kind": "zip",
+            "md5": "e7731f76e255e5ecfb3dc755ee43083f"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ti050mc.zip",
+            "kind": "zip",
+            "md5": "7a0df321482b4423c4be585cc72030ac"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/V000mc.zip",
+            "kind": "zip",
+            "md5": "5056b3dccd8c6285f82db1120474200c"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Cr050mc.zip",
+            "kind": "zip",
+            "md5": "b9d177e6e2b6451b4ced43a83208a6ad"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Cr052mc.zip",
+            "kind": "zip",
+            "md5": "f2e4e0cdf3a0635b8ca24f465565f95f"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Cr053mc.zip",
+            "kind": "zip",
+            "md5": "3522c312128c36e70791dd9552503a5b"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Cr054mc.zip",
+            "kind": "zip",
+            "md5": "891436950d0fc26a0dc0718889be37c5"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mn055mc.zip",
+            "kind": "zip",
+            "md5": "c8eab2157e4f62021bd119a5ae80998f"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Fe054mc.zip",
+            "kind": "zip",
+            "md5": "184b08c01dfc46df006db6dc2fb97a51"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Fe056mc.zip",
+            "kind": "zip",
+            "md5": "07f86868612dcef2d6e525afa31a2aa3"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Fe057mc.zip",
+            "kind": "zip",
+            "md5": "5f8120ee1155c4f0b0a8038815d30f7b"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Fe058mc.zip",
+            "kind": "zip",
+            "md5": "54da15396593d19d30a6b7f514e68ed8"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Co059mc.zip",
+            "kind": "zip",
+            "md5": "544992e9ada14e504a73acc8a719c6c0"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ni058mc.zip",
+            "kind": "zip",
+            "md5": "014f7fad69924381c4624b06d334259f"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ni060mc.zip",
+            "kind": "zip",
+            "md5": "9174c7466141f1d12640834e72769d41"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ni061mc.zip",
+            "kind": "zip",
+            "md5": "a32aa327cece6b9e8020a48eb94d9c11"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ni062mc.zip",
+            "kind": "zip",
+            "md5": "1ad2b6e4697bf6feefe7f77e8ec8c17b"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ni064mc.zip",
+            "kind": "zip",
+            "md5": "595afa6779106edc7ca7eb07ce4b5b8d"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Cu063mc.zip",
+            "kind": "zip",
+            "md5": "7b485d1e6858566e2826376d58f40e4e"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Cu065mc.zip",
+            "kind": "zip",
+            "md5": "a4be937fb1ee1cc8962476ddc40fa018"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ga000mc.zip",
+            "kind": "zip",
+            "md5": "3c1b01aa7a35efb76b28f77b15e6f06e"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Zr000mc.zip",
+            "kind": "zip",
+            "md5": "131c2d811338d777ee0a92130a8f2745"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Nb093mc.zip",
+            "kind": "zip",
+            "md5": "bb799b0abedbe093f1390860f94fc3d5"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mo092mc.zip",
+            "kind": "zip",
+            "md5": "ef31a4fd1d4d8a02ade24fd6e3b3f836"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mo094mc.zip",
+            "kind": "zip",
+            "md5": "3866356492efde49cc968de35fad1d74"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mo095mc.zip",
+            "kind": "zip",
+            "md5": "780abcf2c5efc3f397af71c92cb236ad"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mo096mc.zip",
+            "kind": "zip",
+            "md5": "77ee12ac96c39ebc66bb4de4e18c0cc3"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mo097mc.zip",
+            "kind": "zip",
+            "md5": "41e81911948be83b1e9c093242e1eac5"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mo098mc.zip",
+            "kind": "zip",
+            "md5": "258dbe612de7616c14d540283699d097"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Mo100mc.zip",
+            "kind": "zip",
+            "md5": "58b0f49a28beed0461a36b20b3592323"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Sn000mc.zip",
+            "kind": "zip",
+            "md5": "c76fde65aa63f330c6936f5e850ecc0b"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Ta181mc.zip",
+            "kind": "zip",
+            "md5": "87002a8fc5b8c08ada203b6ecf366bfb"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/W182mc.zip",
+            "kind": "zip",
+            "md5": "ddbe2e4788dda793c99462863df81224"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/W183mc.zip",
+            "kind": "zip",
+            "md5": "5700b58557f6765cc03e242189899511"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/W184mc.zip",
+            "kind": "zip",
+            "md5": "3be2a0211a54feebffc4f487fa2ec258"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/W186mc.zip",
+            "kind": "zip",
+            "md5": "6b5ddfeca03cf8b22b4ede1d1fb77442"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Au197mc.zip",
+            "kind": "zip",
+            "md5": "5fa3bc1149313dc4bb8c7d937012089b"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Pb206mc.zip",
+            "kind": "zip",
+            "md5": "9e9291e3e496916063e561576523ef89"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Pb207mc.zip",
+            "kind": "zip",
+            "md5": "5872e0da66b9486ced806dc962d3cd90"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Pb208mc.zip",
+            "kind": "zip",
+            "md5": "5e3a31b0b9c609cf1b253def69c5493d"
+          },
+          {
+            "url": "https://www-nds.iaea.org/fendl21/fendl21mc/Bi209mc.zip",
+            "kind": "zip",
+            "md5": "97cfe9c4c9a14833a4ab669c85791a9c"
+          }
+        ],
+        "fragment_glob": "*.dir",
+        "rename_xsdir_files": {
+          "HE003.ace": "He003.ace",
+          "HE004.ace": "He004.ace",
+          "LI006.ace": "Li006.ace",
+          "LI007.ace": "Li007.ace",
+          "BE009.ace": "Be009.ace",
+          "CL035.ace": "Cl035.ace",
+          "CL037.ace": "Cl037.ace"
+        }
+      },
+      "tsl": null,
+      "proton": null,
+      "dosimetry": null
+    },
+    "D1SDATA": {
+      "display_name": "D1SDATA",
+      "date": "2023-05-04",
+      "production": true,
+      "description": "D1S (Direct One-Step) activation ACE data (293.6K), derived from FENDL-3.1c and modified by UNED for D1S shutdown dose-rate calculations. Includes supplementary patches: a revised Nb-93 evaluation, a revised Cu-65 evaluation, and newly added Re-185 and Sb-121 evaluations. Provided as local files, not downloaded from a public URL.",
+      "neutron": {
+        "mode": "ready",
+        "archives": [
+          {
+            "path": "d1sdata_YTF5QD_v1_0.zip",
+            "kind": "zip",
+            "md5": "f2f268a2b95d06046dac72631223d554"
+          }
+        ],
+        "flatten_dirs": [
+          "d1sdata"
+        ],
+        "xsdir_member": "xsdir_d1s",
+        "patches": [
+          {
+            "path": "Cross_section_data_for_Nb-93_YVM5FB_v1_0.zip",
+            "kind": "zip",
+            "md5": "544923de64481183cdf9a5c9b4b510ea",
+            "files": [
+              {
+                "member": "Nb93.ace",
+                "dest": "Nb93.ace"
+              }
+            ]
+          },
+          {
+            "path": "Cross_section_data_for_Cu-65,_Re-185,_Sb_8TYH5B_v1_0.zip",
+            "kind": "zip",
+            "md5": "fad6f01e510852cd2b57923bb64e4971",
+            "files": [
+              {
+                "member": "additionalLibs/ace/Cu65.ace",
+                "dest": "Cu65.ace",
+                "xsdir_fragment": "additionalLibs/dir/Cu65.dir"
+              },
+              {
+                "member": "additionalLibs/ace/Re185.ace",
+                "dest": "Re185.ace",
+                "xsdir_fragment": "additionalLibs/dir/Re185.dir"
+              },
+              {
+                "member": "additionalLibs/ace/Sb121.ace",
+                "dest": "Sb121.ace",
+                "xsdir_fragment": "additionalLibs/dir/Sb121.dir"
+              }
+            ]
+          }
+        ]
+      },
+      "tsl": null,
+      "proton": null,
+      "dosimetry": null
+    },
+    "IRDFF2": {
+      "display_name": "IRDFF-II",
+      "date": "2020-12-09",
+      "production": true,
+      "description": "IRDFF-II neutron dosimetry/metrology cross sections (70 reactions, 0-60 MeV), from the IAEA Nuclear Data Section. Activation/response-function data for foil dosimetry and reactor/fusion metrology (ACE dosimetry tables, ZAID suffix .34y); not neutron transport, thermal scattering, or proton-induced data.",
+      "neutron": null,
+      "tsl": null,
+      "proton": null,
+      "dosimetry": {
+        "display_name": "IRDFF-II Dosimetry",
+        "description": "IRDFF-II neutron dosimetry/metrology cross sections (70 reactions, 0-60 MeV) in ACE format, from the IAEA Nuclear Data Section.",
+        "mode": "fragments",
+        "archives": [
+          {
+            "url": "https://nds.iaea.org/IRDFF/IRDFF-II_ACE.zip",
+            "kind": "zip",
+            "md5": "3df2f72c547d8aa8cbc3209ae6f0fa74"
+          }
+        ],
+        "fragment_glob": "IRDFF-II/*.xsd",
+        "flatten_dirs": [
+          "IRDFF-II"
+        ],
+        "drop_members": [
+          "IRDFF-II.xsd"
+        ]
+      }
+    },
+    "JEFF33": {
+      "display_name": "JEFF-3.3",
+      "date": "2017-11-01",
+      "production": true,
+      "description": "JEFF-3.3 neutron transport ACE data, all published temperatures (293.6/600/900/1200/1500/1800K) merged into a single library, from the OECD NEA Data Bank. CC-BY-4.0.",
+      "neutron": {
+        "mode": "merge-master",
+        "archives": [
+          {
+            "url": "https://data.oecd-nea.org/records/zjcaq-2rw89/files/ace_293.tar.gz?download=1",
+            "kind": "tar",
+            "md5": "85a1ead4c343b86fff179271703e78e4"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/zjcaq-2rw89/files/ace_600.tar.gz?download=1",
+            "kind": "tar",
+            "md5": "652f687066c9622c9719a3293f8297d4"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/zjcaq-2rw89/files/ace_900.tar.gz?download=1",
+            "kind": "tar",
+            "md5": "4b8da85748455d3cfb73bf4dfe1060ad"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/zjcaq-2rw89/files/ace_1200.tar.gz?download=1",
+            "kind": "tar",
+            "md5": "7752d56385899d03a346dd01aaa7095f"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/zjcaq-2rw89/files/ace_1500.tar.gz?download=1",
+            "kind": "tar",
+            "md5": "bd6ebc0405837e452a9ae0e07d5c323b"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/zjcaq-2rw89/files/ace_1800.tar.gz?download=1",
+            "kind": "tar",
+            "md5": "704be7f1b2561251bfc3c5681028784d"
+          }
+        ],
+        "strip_top_level_dir": true,
+        "xsdir_source": {
+          "url": "https://data.oecd-nea.org/records/zjcaq-2rw89/files/xsdir.jeff33?download=1",
+          "md5": "80efa4f2cb1b18a8db93ac2fae24918e"
+        }
+      },
+      "tsl": {
+        "display_name": "JEFF-3.3 TSL",
+        "description": "JEFF-3.3 thermal scattering law (S(alpha,beta)) ACE data, from the OECD NEA Data Bank. Shares its xsdir with the neutron transport archive (xsdir.jeff33), which lists both; only the TSL-relevant entries (referencing files actually present in this archive) are kept. CC-BY-4.0.",
+        "mode": "merge-master",
+        "archives": [
+          {
+            "url": "https://data.oecd-nea.org/records/1rkw4-zk241/files/ace_tsl.tar.gz?download=1",
+            "kind": "tar",
+            "md5": "a03a7175bb02ed40fe7d5fed6953710d"
+          }
+        ],
+        "strip_top_level_dir": true,
+        "xsdir_source": {
+          "url": "https://data.oecd-nea.org/records/zjcaq-2rw89/files/xsdir.jeff33?download=1",
+          "md5": "80efa4f2cb1b18a8db93ac2fae24918e"
+        }
+      },
+      "proton": {
+        "display_name": "JEFF-3.3 Proton",
+        "description": "JEFF-3.3 proton-induced ACE data (283 stable target nuclides, TENDL-2017, unbroadened/0K), from the OECD NEA Data Bank. CC-BY-4.0.",
+        "mode": "ready",
+        "archives": [
+          {
+            "url": "https://data.oecd-nea.org/records/nbc0n-d3745/files/JEFF33-p-ace.tgz?download=1",
+            "kind": "tar",
+            "md5": "4a5d1cd6669ccf478d8b3bdf3516bf00"
+          }
+        ],
+        "xsdir_member": "tendl17h.xs",
+        "rename_members": {
+          "tendl17h": "tendlh"
+        },
+        "drop_members": [
+          "graphs.tgz"
+        ],
+        "readme_member": "Ace-Readme.tendl17h"
+      },
+      "dosimetry": null
+    },
+    "JEFF40": {
+      "display_name": "JEFF-4.0",
+      "date": "2026-08-11",
+      "production": true,
+      "description": "JEFF-4.0 neutron transport ACE data, all published temperatures (0.1/293.6/300/600/900/1200/1500/1800K) merged into a single library, from the OECD NEA Data Bank. CC-BY-4.0.",
+      "neutron": {
+        "mode": "merge-master",
+        "archives": [
+          {
+            "url": "https://data.oecd-nea.org/records/0vhn5-d6t91/files/JEFF40-Processed-Neutron-ACE-0.1K.zip?download=1",
+            "kind": "zip",
+            "md5": "33a56aa421b4751b25e02c93ae9af7db"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/53ret-j3386/files/JEFF40-Processed-Neutron-ACE-293K.zip?download=1",
+            "kind": "zip",
+            "md5": "40cdba52b977f6b3e98fd7df26af14be"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/53ret-j3386/files/JEFF40-Processed-Neutron-ACE-300K.zip?download=1",
+            "kind": "zip",
+            "md5": "5bfbf30dbea165f7d1a21faa79d54766"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/53ret-j3386/files/JEFF40-Processed-Neutron-ACE-600K.zip?download=1",
+            "kind": "zip",
+            "md5": "320715d692d3ea5ec32ef8508c7b6296"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/53ret-j3386/files/JEFF40-Processed-Neutron-ACE-900K.zip?download=1",
+            "kind": "zip",
+            "md5": "346e90a477ca03bab6ad1404dd9faa00"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/53ret-j3386/files/JEFF40-Processed-Neutron-ACE-1200K.zip?download=1",
+            "kind": "zip",
+            "md5": "4f6db7d0522cba5090dc618107a3b98d"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/53ret-j3386/files/JEFF40-Processed-Neutron-ACE-1500K.zip?download=1",
+            "kind": "zip",
+            "md5": "1108ede1d5e437089c83608f50d0825d"
+          },
+          {
+            "url": "https://data.oecd-nea.org/records/53ret-j3386/files/JEFF40-Processed-Neutron-ACE-1800K.zip?download=1",
+            "kind": "zip",
+            "md5": "e18d1cdd3d6bf4db8c3379e3338c03cd"
+          }
+        ],
+        "xsdir_source": {
+          "url": "https://data.oecd-nea.org/records/0vhn5-d6t91/files/jeff4.xsdir?download=1",
+          "md5": "3006800cd43996abb819603ca025b021"
+        },
+        "xsdir_overrides": {
+          "url": "https://data.oecd-nea.org/records/53ret-j3386/files/jeff4.xsdir?download=1",
+          "cache_name": "jeff4_53ret-j3386.xsdir",
+          "md5": "e3e8d68e927c4a19afc0d868c1799946",
+          "entries": [
+            "55134.40c", "55134.41c", "55134.42c", "55134.43c", "55134.44c", "55134.45c", "55134.46c",
+            "62150.40c", "62150.41c", "62150.42c", "62150.43c", "62150.44c", "62150.45c", "62150.46c"
+          ]
+        }
+      },
+      "tsl": {
+        "display_name": "JEFF-4.0 TSL",
+        "description": "JEFF-4.0 thermal scattering law (S(alpha,beta)) ACE data, from the OECD NEA Data Bank. Only a selected subset of evaluations is processed to ACE by the provider (Be metal, D in D2O, C in graphite, H in CH2/H2O/ZrH/ZrH1.5/ZrH2, O and U in UO2, Zr in ZrH1.5/ZrH2); the full dataset is available from OECD-NEA on request only. CC-BY-4.0.",
+        "mode": "ready",
+        "archives": [
+          {
+            "url": "https://data.oecd-nea.org/records/m3qef-tjx77/files/JEFF40-Processed-TSL-selected-ACE.zip?download=1",
+            "kind": "zip",
+            "md5": "97acabbf69e9c3dff4ca59582ccbf41b"
+          }
+        ],
+        "flatten_dirs": [
+          "data"
+        ],
+        "xsdir_member": "jeff4.xsdir",
+        "discard_members": [
+          "ouo2.01_1001.00",
+          "ouo2.01_1101.00",
+          "ouo2.01_1201.00",
+          "ouo2.01_1301.00",
+          "ouo2.01_1401.00",
+          "ouo2.01_1501.00",
+          "ouo2.01_1601.00",
+          "ouo2.01_1701.00",
+          "ouo2.01_284.00",
+          "ouo2.01_295.00",
+          "ouo2.01_301.00",
+          "ouo2.01_325.00",
+          "ouo2.01_351.00",
+          "ouo2.01_375.00",
+          "ouo2.01_401.00",
+          "ouo2.01_425.00",
+          "ouo2.01_451.00",
+          "ouo2.01_475.00",
+          "ouo2.01_501.00",
+          "ouo2.01_525.00",
+          "ouo2.01_551.00",
+          "ouo2.01_575.00",
+          "ouo2.01_601.00",
+          "ouo2.01_625.00",
+          "ouo2.01_651.00",
+          "ouo2.01_675.00",
+          "ouo2.01_701.00",
+          "ouo2.01_751.00",
+          "ouo2.01_801.00",
+          "ouo2.01_851.00",
+          "ouo2.01_901.00",
+          "ouo2.01_951.00",
+          "uuo2.01_1001.00",
+          "uuo2.01_1101.00",
+          "uuo2.01_1201.00",
+          "uuo2.01_1301.00",
+          "uuo2.01_1401.00",
+          "uuo2.01_1501.00",
+          "uuo2.01_1601.00",
+          "uuo2.01_1701.00",
+          "uuo2.01_284.00",
+          "uuo2.01_295.00",
+          "uuo2.01_301.00",
+          "uuo2.01_325.00",
+          "uuo2.01_351.00",
+          "uuo2.01_375.00",
+          "uuo2.01_401.00",
+          "uuo2.01_425.00",
+          "uuo2.01_451.00",
+          "uuo2.01_475.00",
+          "uuo2.01_501.00",
+          "uuo2.01_525.00",
+          "uuo2.01_551.00",
+          "uuo2.01_575.00",
+          "uuo2.01_601.00",
+          "uuo2.01_625.00",
+          "uuo2.01_651.00",
+          "uuo2.01_675.00",
+          "uuo2.01_701.00",
+          "uuo2.01_751.00",
+          "uuo2.01_801.00",
+          "uuo2.01_851.00",
+          "uuo2.01_901.00",
+          "uuo2.01_951.00"
+        ],
+        "rename_xsdir_tables": {
+          "ouo2.00_285.00": "ouo2.00t",
+          "ouo2.00_294.00": "ouo2.01t",
+          "ouo2.00_300.00": "ouo2.02t",
+          "ouo2.00_324.00": "ouo2.03t",
+          "ouo2.00_350.00": "ouo2.04t",
+          "ouo2.00_374.00": "ouo2.05t",
+          "ouo2.00_400.00": "ouo2.06t",
+          "ouo2.00_424.00": "ouo2.07t",
+          "ouo2.00_450.00": "ouo2.08t",
+          "ouo2.00_474.00": "ouo2.09t",
+          "ouo2.00_500.00": "ouo2.10t",
+          "ouo2.00_524.00": "ouo2.11t",
+          "ouo2.00_550.00": "ouo2.12t",
+          "ouo2.00_574.00": "ouo2.13t",
+          "ouo2.00_600.00": "ouo2.14t",
+          "ouo2.00_624.00": "ouo2.15t",
+          "ouo2.00_650.00": "ouo2.16t",
+          "ouo2.00_674.00": "ouo2.17t",
+          "ouo2.00_700.00": "ouo2.18t",
+          "ouo2.00_750.00": "ouo2.19t",
+          "ouo2.00_800.00": "ouo2.20t",
+          "ouo2.00_850.00": "ouo2.21t",
+          "ouo2.00_900.00": "ouo2.22t",
+          "ouo2.00_950.00": "ouo2.23t",
+          "ouo2.00_1000.00": "ouo2.24t",
+          "ouo2.00_1100.00": "ouo2.25t",
+          "ouo2.00_1200.00": "ouo2.26t",
+          "ouo2.00_1300.00": "ouo2.27t",
+          "ouo2.00_1400.00": "ouo2.28t",
+          "ouo2.00_1500.00": "ouo2.29t",
+          "ouo2.00_1600.00": "ouo2.30t",
+          "ouo2.00_1700.00": "ouo2.31t",
+          "uuo2.00_285.00": "uuo2.00t",
+          "uuo2.00_294.00": "uuo2.01t",
+          "uuo2.00_300.00": "uuo2.02t",
+          "uuo2.00_324.00": "uuo2.03t",
+          "uuo2.00_350.00": "uuo2.04t",
+          "uuo2.00_374.00": "uuo2.05t",
+          "uuo2.00_400.00": "uuo2.06t",
+          "uuo2.00_424.00": "uuo2.07t",
+          "uuo2.00_450.00": "uuo2.08t",
+          "uuo2.00_474.00": "uuo2.09t",
+          "uuo2.00_500.00": "uuo2.10t",
+          "uuo2.00_524.00": "uuo2.11t",
+          "uuo2.00_550.00": "uuo2.12t",
+          "uuo2.00_574.00": "uuo2.13t",
+          "uuo2.00_600.00": "uuo2.14t",
+          "uuo2.00_624.00": "uuo2.15t",
+          "uuo2.00_650.00": "uuo2.16t",
+          "uuo2.00_674.00": "uuo2.17t",
+          "uuo2.00_700.00": "uuo2.18t",
+          "uuo2.00_750.00": "uuo2.19t",
+          "uuo2.00_800.00": "uuo2.20t",
+          "uuo2.00_850.00": "uuo2.21t",
+          "uuo2.00_900.00": "uuo2.22t",
+          "uuo2.00_950.00": "uuo2.23t",
+          "uuo2.00_1000.00": "uuo2.24t",
+          "uuo2.00_1100.00": "uuo2.25t",
+          "uuo2.00_1200.00": "uuo2.26t",
+          "uuo2.00_1300.00": "uuo2.27t",
+          "uuo2.00_1400.00": "uuo2.28t",
+          "uuo2.00_1500.00": "uuo2.29t",
+          "uuo2.00_1600.00": "uuo2.30t",
+          "uuo2.00_1700.00": "uuo2.31t"
+        },
+        "drop_members": [
+          "jeff4.xsdir.serpent"
+        ]
+      },
+      "proton": {
+        "display_name": "JEFF-4.0 Proton",
+        "description": "JEFF-4.0 proton-induced ACE data (stable targets), from the OECD NEA Data Bank. CC-BY-4.0.",
+        "mode": "ready",
+        "archives": [
+          {
+            "url": "https://data.oecd-nea.org/records/y91rc-aa458/files/JEFF40-Processed-Proton-ACE.zip?download=1",
+            "kind": "zip",
+            "md5": "43535dac8ba4a132c435e21b8cb4998a"
+          }
+        ],
+        "xsdir_member": "xsdirentries_JEFF4_proton.txt"
+      },
+      "dosimetry": null
+    }
+  }
+}
