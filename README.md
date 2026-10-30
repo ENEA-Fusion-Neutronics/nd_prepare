@@ -38,6 +38,8 @@ Each library yields up to four entries, named `<NAME>_<CATEGORY>`:
    in CH₂/H₂O/ZrH/ZrH1.5/ZrH2, O and U in UO₂, Zr in ZrH1.5/ZrH2. The full set
    is available from OECD-NEA on request.
 
+To add a library, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Installation
 
 Requires Python 3.9 or later, `curl` on the `PATH` (used for every download),
