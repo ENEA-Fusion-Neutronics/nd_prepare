@@ -4,12 +4,12 @@
 # SPDX-License-Identifier: MPL-2.0
 
 [build-system]
-requires = ["setuptools>=77.0.3"]
+requires = ["setuptools>=77.0.3", "setuptools-scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "nd-prepare"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Download and repackage external nuclear data libraries into nd_manager's local-repository format"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -28,6 +28,8 @@ Homepage = "https://github.com/ENEA-Fusion-Neutronics/nd_prepare"
 
 [project.scripts]
 nd-prepare = "nd_prepare.cli:main"
+
+[tool.setuptools_scm]
 
 [tool.setuptools.packages.find]
 where = ["src"]

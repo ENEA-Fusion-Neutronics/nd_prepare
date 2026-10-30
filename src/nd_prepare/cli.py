@@ -15,7 +15,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from . import prepare
+from . import __version__, prepare
 from .common import PACKAGE_DIR, log
 from .manifest import (
     format_manifest_listing,
@@ -27,6 +27,7 @@ from .manifest import (
 
 def build_parser():
     parser = argparse.ArgumentParser(prog="nd-prepare", description=__doc__)
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument(
         "--manifest", default=str(PACKAGE_DIR / "sources.json"),
         help="Path to the sources.json manifest to read (default: the copy bundled with the package).",
