@@ -34,7 +34,7 @@ def build_parser():
     )
     parser.add_argument(
         "--workdir", default=None,
-        help="Scratch dir for extraction (default: ./work)",
+        help="Scratch directory for extraction (default: ./work).",
     )
     parser.add_argument(
         "--only", nargs="+", default=None,

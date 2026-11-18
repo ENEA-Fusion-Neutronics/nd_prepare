@@ -46,7 +46,9 @@ def write_xsdir_text(path, text):
     # file's first line on concatenation.
     if text and not text.endswith("\n"):
         text += "\n"
-    path.write_text(text, encoding=XSDIR_ENCODING)
+    # newline="" keeps "\n" as is; on Windows the default would write "\r\n".
+    with open(path, "w", encoding=XSDIR_ENCODING, newline="") as handle:
+        handle.write(text)
 
 
 def split_vendor_xsdir_header(text):

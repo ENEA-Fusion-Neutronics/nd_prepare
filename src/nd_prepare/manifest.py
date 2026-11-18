@@ -98,7 +98,8 @@ def _validate_source(source, where, errors, needs_kind=True, extra_fields=()):
         errors.append(f"{where}: \"kind\" must be one of {', '.join(ARCHIVE_KINDS)}, got {source.get('kind')!r}")
     cache_name = source.get("cache_name")
     if "cache_name" in source and not (
-        isinstance(cache_name, str) and "/" not in cache_name and _is_safe_relative_path(cache_name)
+        isinstance(cache_name, str) and "/" not in cache_name and "\\" not in cache_name
+        and _is_safe_relative_path(cache_name)
     ):
         errors.append(f"{where}: \"cache_name\" must be a plain file name (no \"/\" or \"..\"), got {cache_name!r}")
     elif isinstance(source.get("url"), str):

@@ -15,7 +15,11 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = "MPL-2.0"
 license-files = ["COPYING"]
+keywords = ["nuclear data", "ACE", "xsdir", "MCNP", "nd_manager"]
 classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Topic :: Scientific/Engineering :: Physics",
 ]

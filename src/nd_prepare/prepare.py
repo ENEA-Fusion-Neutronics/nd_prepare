@@ -132,6 +132,7 @@ def report_table_name_collisions(names_by_entry):
 
 def load_output_libraries_json(path):
     if not path.exists():
+        # "version" is the libraries.json format version nd_manager expects, not of this tool
         return {"version": "1.0.0", "ACE Libraries": {}}
     data = load_json_file(path)
     # Checked here, as a hand-edited file would otherwise fail midway through a run.
@@ -147,7 +148,7 @@ def save_output_libraries_json(path, data):
     data["date"] = date.today().isoformat()
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_name(path.name + ".tmp")
-    with open(tmp, "w", encoding="utf8") as handle:
+    with open(tmp, "w", encoding="utf8", newline="\n") as handle:
         json.dump(data, handle, indent=2)
         handle.write("\n")
     os.replace(tmp, path)

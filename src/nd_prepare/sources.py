@@ -74,7 +74,7 @@ def download(url, dest, md5, timeout_seconds=3600):
     # it would ask the server for bytes past the end.
     if part.exists() and _file_digest(part, "md5") == md5:
         log(f"md5 verified: {dest.name} (completed by an earlier run)")
-        part.rename(dest)
+        part.replace(dest)
         return
 
     log(f"downloading {url} -> {dest}")
@@ -95,7 +95,7 @@ def download(url, dest, md5, timeout_seconds=3600):
     except RuntimeError:
         part.unlink()
         raise
-    part.rename(dest)
+    part.replace(dest)
 
 
 def resolve_archive_source(archive, cache_dir):

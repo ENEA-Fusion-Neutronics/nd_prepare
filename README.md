@@ -42,8 +42,11 @@ To add a library, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Installation
 
-Requires Python 3.9 or later, `curl` on the `PATH` (used for every download),
-and an `nd_manager` installed separately.
+Requires Python 3.9 or later, `curl` on the `PATH` (used for every download;
+Windows 10 and later ships `curl.exe`), and an `nd_manager` installed separately.
+Only Linux is supported; it should work on Windows and macOS too, but that is
+untested. On Windows, keep `cache/` and `work/` in a short path: some JEFF
+file names are long and the 260-character limit applies.
 
 ```bash
 pip install .        # or: pip install -e .  to edit the code or sources.json in place
@@ -330,6 +333,8 @@ D1SDATA's fragments are fill-in-the-blank templates, with the literal words
 | `sources.json` | The manifest, bundled as package data |
 
 ## End-to-end verification
+
+The scripts in `tests/` target POSIX systems; `nd-prepare` itself does not.
 
 `tests/verify_full_run.py` is a pre-release check, not a unit test suite. It:
 

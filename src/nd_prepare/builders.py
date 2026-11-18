@@ -95,6 +95,15 @@ def _extract_archives(spec, cache_dir, payload_dir, strip_components=0):
             log_wrapped(collisions)
         seen.update(written)
 
+    # Names that differ only in case are two files here but one on Windows and macOS.
+    by_lowercase = {}
+    for name in seen:
+        by_lowercase.setdefault(name.lower(), []).append(name)
+    clashes = sorted(" / ".join(sorted(names)) for names in by_lowercase.values() if len(names) > 1)
+    if clashes:
+        log(f"warning: {len(clashes)} file name(s) differ only in case; a case-insensitive file system keeps one:")
+        log_wrapped(clashes)
+
 
 def _read_vendor_xsdir(source, cache_dir, field):
     """(header, entries) of an xsdir source; raises if it has no "directory" line."""

@@ -8,7 +8,7 @@
 import shutil
 import tarfile
 import zipfile
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 
 from .common import log
 
@@ -19,9 +19,12 @@ def _member_name(raw_name, strip_components):
     """Normalized relative name of an archive member after dropping its leading
     components, or None if nothing is left or it is junk. Raises on a
     zip-slip / path-traversal name."""
-    parts = Path(raw_name).parts
-    if parts and (parts[0] == "/" or ".." in parts):
+    # Checked as POSIX and Windows paths: a drive letter or backslash is harmless on one, an escape on the other.
+    posix = PurePosixPath(raw_name)
+    windows = PureWindowsPath(raw_name)
+    if posix.is_absolute() or windows.anchor or ".." in posix.parts or ".." in windows.parts:
         raise RuntimeError(f"unsafe path in archive: {raw_name}")
+    parts = posix.parts
     if any(part.startswith(".") or part in JUNK_DIR_NAMES for part in parts):
         return None
     parts = parts[strip_components:]
