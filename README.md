@@ -61,7 +61,7 @@ without `-e`, edits to the checkout's `sources.json` need a reinstall. `cache/`,
 ## Usage
 
 ```bash
-nd-prepare                      # every library in sources.json
+nd-prepare --all                # every library (a bare nd-prepare is an error)
 nd-prepare --list               # keys and categories accepted by --only
 nd-prepare --only FENDL31D
 nd-prepare --only JEFF40:neutron JEFF40:tsl
@@ -71,9 +71,9 @@ nd-prepare --only IRDFF2:dosimetry
 Archives and `libraries.json` go to `output/`. Downloads are cached in `cache/`,
 so re-runs fetch only what is missing. An unknown key or category is an error.
 
-D1SDATA is built from local files, so a run that selects it (including a plain
-`nd-prepare` or `--download-only`) stops with "local archive not found" unless
-its zips are in the current directory. Without them, select the other
+D1SDATA is built from local files, so a run that selects it (including `--all`
+or `--download-only`) stops with "local archive not found" unless its zips are
+in the current directory. Without them, select the other
 libraries: `nd-prepare --only FENDL32C FENDL31D FENDL21 IRDFF2 JEFF33 JEFF40`.
 
 | Option | Effect |

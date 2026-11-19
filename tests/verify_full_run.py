@@ -108,6 +108,8 @@ def run_nd_prepare(bin_dir, workdir, compression, only_args, cleanup_work=False)
         cmd.append("--cleanup-work")
     if only_args:
         cmd += ["--only", *only_args]
+    else:
+        cmd.append("--all")
     run(cmd, cwd=workdir)
 
 

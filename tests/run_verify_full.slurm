@@ -18,7 +18,7 @@
 #   python3 /path/to/nd_prepare/tests/verify_full_run.py --workdir . \
 #       --nd-prepare-path /path/to/nd_prepare --nd-manager-path /path/to/nd_manager \
 #       --only IRDFF2:dosimetry
-#   venv/bin/nd-prepare --download-only
+#   venv/bin/nd-prepare --all --download-only
 #
 # The first command builds venv/ and checks the setup on one small library; the
 # second downloads the rest without building it, and stops if a D1SDATA zip is

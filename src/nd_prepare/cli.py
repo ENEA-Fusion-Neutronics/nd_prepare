@@ -42,6 +42,10 @@ def build_parser():
         ":proton, or :dosimetry to process just one part.",
     )
     parser.add_argument(
+        "--all", action="store_true",
+        help="Process every library in the manifest (required when --only is not given).",
+    )
+    parser.add_argument(
         "--list", action="store_true",
         help="List the library keys and categories in the manifest (the values --only accepts), then exit.",
     )
@@ -101,7 +105,12 @@ def run_entries(args, manifest, settings, libraries_json, stale):
 
 
 def run():
-    args = build_parser().parse_args()
+    parser = build_parser()
+    args = parser.parse_args()
+    if args.only and args.all:
+        parser.error("--only and --all are mutually exclusive")
+    if not (args.only or args.all or args.list or args.prune):
+        parser.error("nothing selected: use --only KEY..., --all, --list or --prune")
     manifest = load_manifest(Path(args.manifest).resolve())
 
     if args.list:
